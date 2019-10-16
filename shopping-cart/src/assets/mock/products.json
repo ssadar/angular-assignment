@@ -1,0 +1,38 @@
+{
+    "products" : [ {
+        "id": 1,
+        "price" : 10000,
+        "name" : "Moto G6+",
+        "desc" : "",
+        "img" : ""
+      }, 
+      {
+        "id": 2,
+        "price" : 12000,
+        "name" : "Samsung M30",
+        "desc" : "",
+        "img" : ""
+      }, 
+      {
+        "id": 3,
+        "price" : 9000,
+        "name" : "MOTO G5",
+        "desc" : "",
+        "img" : ""
+      }, 
+      {
+        "id": 4,
+        "price" : 40000,
+        "name" : "iPhone 8",
+        "desc" : "",
+        "img" : ""
+      }, 
+      {
+        "id": 1,
+        "price" : 16,
+        "name" : "Andy",
+        "desc" : "",
+        "img" : ""
+      }
+    ]
+  }
