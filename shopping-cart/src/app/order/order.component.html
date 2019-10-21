@@ -1,0 +1,19 @@
+<h1>
+    Order History :
+  </h1>
+   <div flex layout-fill layout>
+        <ul>
+          <h3>Orders</h3>
+          
+          <li *ngFor="let order of orders">
+            <div >
+              <h3>{{order.id}}</h3>
+              <div>
+                <li *ngFor="let product of order.products">
+                    <p>{{product.img}} :: {{product.name}} :: {{product.price}}</p>
+                </li>
+             </div>
+            </div>
+          </li>
+        </ul>
+      </div>
