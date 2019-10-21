@@ -15,7 +15,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    MatSliderModule
   ],
   providers: [OrderHistoryService],
   bootstrap: [AppComponent]
