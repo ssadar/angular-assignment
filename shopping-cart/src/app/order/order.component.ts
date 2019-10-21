@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-
+ 
+  
   orders: Observable<Array<Order>>;
   constructor(private service: OrderHistoryService, private cd: ChangeDetectorRef) {}
 
@@ -17,6 +18,7 @@ export class OrderComponent implements OnInit {
     this.service.getOrdersHistory()     
           .subscribe(data => {
             this.orders = data;
+            console.log(data);
         this.cd.detectChanges();
        });
 

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { Http, Headers } from '@angular/http';
+import { HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+
 import 'rxjs/Rx'
-const HEADER = { headers: new Headers({ 'Authentication': 'AFDSSASDF123512' }) };
+const HEADER = { headers: new HttpHeaders({ 'Authentication': 'AFDSSASDF123512' }) };
 
 export interface Order {
   id: Number,
@@ -20,11 +22,13 @@ export interface Order {
 })
 export class OrderHistoryService {
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
   getOrdersHistory() {
     return this.http.get('http://localhost:3000/orders', HEADER)
-      .map(res => res.json())
+      .map((res: Response) => res)
+      
       .catch(this.handleError)
+      
       
   }
   
